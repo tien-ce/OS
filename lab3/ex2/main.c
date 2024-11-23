@@ -49,7 +49,7 @@ void* sum_worker (void* arg) {
    printf("In worker from %d to %d\n", idx_range->start, idx_range->end);
    for(i = idx_range->start;i<=idx_range->end;i++){
    		local_sum+=shrdarrbuf[i];
-   }
+   }v
    pthread_mutex_lock(&mtx);
    sumbuf += local_sum;
    pthread_mutex_unlock(&mtx);
